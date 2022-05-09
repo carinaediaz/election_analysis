@@ -8,7 +8,7 @@
 
 ## Results
 ##### Tasked with certifying the votes, we were asked to present the Colorado Board of Elections with the total vote count, a breakdown of votes cast per candidate, and voter turnout per county. See the image of the election_analysis.txt file we created with the election results below. 
-![election_analysis_results.png]()
+![election_analysis_results.png](https://github.com/carinaediaz/election_analysis/blob/main/Analysis/election_analysis_results.png)
 
 ## Summary
 ##### By automating the process of calculating the results for the Colorado Board of Elections, we are able to apply the process to future elections with very few edits. By creating lists and dictionaries that search for the unique occurences of candidate and county names, we avoid manually combing through the data to enter the list options and manually having to edit them if the data changes. See the code selections below that show the creation of the litss and dictionaries and then the for loop that searches for if the candidate does not match any existing candidate names it adds it to the candidate list. The same was done to create the county list. We could easily apply this code to another election csv file that is formatted as the election_analysis.csv with ballot ID in the first column [0], county in the second column [1], and candidate name in the third column [2], the code will be able to calcualte the same results as shown above in the election_analysis_results.png. 
