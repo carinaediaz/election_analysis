@@ -8,19 +8,7 @@
 
 ## Results
 ##### Tasked with certifying the votes, we were asked to present the Colorado Board of Elections with the total vote count, a breakdown of votes cast per candidate, and voter turnout per county. See the image of the election_analysis.txt file we created with the election results below. 
-- Total Votes: 369,711
-- County Votes:
-  - Jefferson: 10.5% (38,855)
-  - Denver: 82.8% (306,055)
-  - Arapahoe: 6.7% (24,801)
-- Largest County Turnout: Denver
-- Candidates Votes: 
-  - Charles Casper Stockham: 23.0% (85,213)
-  - Diana DeGette: 73.8% (272,892)
-  - Raymon Anthony Doane: 3.1% (11,606)
-- Winner: Diana DeGette
-- Winning Vote Count: 272,892
-- Winning Percentage: 73.8%
+![election_analysis_results.png]()
 
 ## Summary
 ##### By automating the process of calculating the results for the Colorado Board of Elections, we are able to apply the process to future elections with very few edits. By creating lists and dictionaries that search for the unique occurences of candidate and county names, we avoid manually combing through the data to enter the list options and manually having to edit them if the data changes. See the code selections below that show the creation of the litss and dictionaries and then the for loop that searches for if the candidate does not match any existing candidate names it adds it to the candidate list. The same was done to create the county list. We could easily apply this code to another election csv file that is formatted as the election_analysis.csv with ballot ID in the first column [0], county in the second column [1], and candidate name in the third column [2], the code will be able to calcualte the same results as shown above in the election_analysis_results.png. 
@@ -75,3 +63,6 @@ with open(file_to_load) as election_data:
 ```
 
 ##### If the data set were to have additional columns of data that needs to be analyzed, such as a vote on a county proposition, we could easily define the new variables and create commands similar to those we created for the county and candidate vote counts to calculate the results. Created commands with detailed comments makes it much easier to go back and edit or copy old code. 
+
+## Conclusion
+##### Through our analysis of the election_results.csv, we were able to conclude and certify that Diana DeGette was the winning candidate, with 272,892 or 73.8% of the votes. Not only were we able to come to this conclusion through the automization of this process with Python code, but this code could easily be applied to future elections with minor edits as needed. 
