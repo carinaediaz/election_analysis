@@ -11,7 +11,7 @@
 ![election_analysis_results.png](https://github.com/carinaediaz/election_analysis/blob/main/Analysis/election_analysis_results.png)
 
 ## Summary
-##### By automating the process of calculating the results for the Colorado Board of Elections, we are able to apply the process to future elections with very few edits. By creating lists and dictionaries that search for the unique occurences of candidate and county names, we avoid manually combing through the data to enter the list options and manually having to edit them if the data changes. See the code selections below that show the creation of the litss and dictionaries and then the for loop that searches for if the candidate does not match any existing candidate names it adds it to the candidate list. The same was done to create the county list. We could easily apply this code to another election csv file that is formatted as the election_analysis.csv with ballot ID in the first column [0], county in the second column [1], and candidate name in the third column [2], the code will be able to calcualte the same results as shown above in the election_analysis_results.png. 
+##### By automating the process of calculating the results for the Colorado Board of Elections, we are able to apply the process to future elections with very few edits. By creating lists and dictionaries that search for the unique occurences of candidate and county names, we avoid manually combing through the data to enter the list options and manually having to edit them if the data changes. See the code selections below that show the creation of the lists and dictionaries; then the for loop that searches for if the candidate does not match any existing candidate names it adds it to the candidate list. The same was done to create the county list. We could easily apply this code to another election csv file that is formatted as the election_analysis.csv with ballot ID in the first column [0], county in the second column [1], and candidate name in the third column [2], the code will be able to calcualte the same results as shown above in the election_analysis_results.png. 
 
 ```
 # Candidate Options and candidate votes.
@@ -47,7 +47,7 @@ with open(file_to_load) as election_data:
         candidate_votes[candidate_name] += 1
 ```
 
-##### Similarly, we also automated the printing of the election results, both in the terminal and in the election_analysis.txt file so that we would not have to manually enter them. By using references to variables we created earlier in the code, you will see in the print command below that if we were to change the data to show that a candidate other than Diana DeGette received the majority vote, their name would appear as the winning candidate automatically.  
+##### Similarly, we also automated the printing of the election results, both in the terminal and in the election_analysis.txt file so that we would not have to manually enter this information. By using references to variables we created earlier in the code, you will see in the print command below that if we were to change the data to show that a candidate other than Diana DeGette received the majority vote, their name would appear as the winning candidate automatically.  
 
 ```
     # Print the winning candidate (to terminal)
